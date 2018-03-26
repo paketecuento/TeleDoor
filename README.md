@@ -10,12 +10,12 @@ Python3 code to open/close your garage door using a telegram bot. I used an Oran
 ## Dependencies
 You need to install:
 * [Python telegram bot](https://github.com/python-telegram-bot/python-telegram-bot) to interact with Telegram
-* [orangepi_PC_gpio_pyH3](https://github.com/duxingkei33/orangepi_PC_gpio_pyH3) to control onboard leds
+* [orangepi_PC_gpio_pyH3](https://github.com/duxingkei33/orangepi_PC_gpio_pyH3) to control onboard red led
 
 ## Usage
 You need to create a `token id` at [bot_father bot in Telegram](https://telegram.me/BotFather). Also you need to your `chat_id` to receive notifications and send commands to your bot. These two parameters should be used at `door.py`.
 
-Then, move the door.service file to `/lib/systemd/system/` directory and enable the service to stat on boot. Finally add the following code to the end of your `/etc/rc.local` if you want monitor your wifi connection using the onboard red led:
+Then, move the `door.service` file to `/lib/systemd/system/` directory and enable the service to start on boot. Finally, add the following code to the end of your `/etc/rc.local` if you want monitor your wifi connection using the onboard red led:
 
 ```
 python3 /root/moni.py &
